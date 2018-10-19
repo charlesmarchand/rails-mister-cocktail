@@ -1,13 +1,17 @@
-<div class='container'>
+
+<%= render 'components/banner' %>
+  <div class='container'>
   <div class="row">
-    <div class="col-12 center title">All the cocktails</div>
+    <div class="col-12 center title">Pas de bières en ce lieu</div>
+    <i class="fas fa-cocktail"></i>
   </div>
 
   <div class="row">
     <% @cocktails.each do |cocktail| %>
     <div class="col-xs-12 col-sm-4 col-md-4">
       <div class="cocktail-card">
-        <div class="cocktail-card-image"></div>
+        <div class="cocktail-card-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')"></div>
         <div class='cocktail-card-title'><%=cocktail.name%></div>
 
         <div class='cocktail-card-actions'>

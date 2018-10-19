@@ -2,5 +2,36 @@
 .title {
   text-align:center ;
   font-family: 'Kodchasan', sans-serif;
-  font-size: 20px;
+  font-size: 30px;
+  padding: 20px;
+}
+
+.btn-primary, .btn-primary:hover {
+    background-color: #001f3f !important;
+}
+
+.ingredient {
+font-family: 'Kodchasan', sans-serif;
+
+}
+
+.ingredients {
+  list-style-type: none;
+  display: flex;
+  margin: 30px;
+}
+
+.btn-medium {
+  color: #001f3f;
+  border: 1px solid #001f3f;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  margin-left : 500px;
+}
+.btn-medium:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #001f3f;
 }

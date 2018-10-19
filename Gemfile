@@ -35,8 +35,9 @@ gem 'simple_form'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
-
+gem 'cloudinary'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'carrierwave', '~> 1.2'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -1,0 +1,23 @@
+<div class='container'>
+  <div class="row">
+    <div class="col-12 center title">All the cocktails</div>
+  </div>
+
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+    <div class="col-xs-12 col-sm-4 col-md-4">
+      <div class="cocktail-card">
+        <div class="cocktail-card-image"></div>
+        <div class='cocktail-card-title'><%=cocktail.name%></div>
+
+        <div class='cocktail-card-actions'>
+          <%= link_to "Check it out", cocktail_path(cocktail.id) %>
+        </div>
+      </div>
+    </div>
+    <%end%>
+  </div>
+
+
+</div>
+

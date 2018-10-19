@@ -1,0 +1,39 @@
+<div class="map" style="background-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200')">
+
+</div>
+
+
+<div class="container margin-top-negative">
+  <div class="row">
+    <div class="coll-8">
+      <div class="cocktail-show-card">
+        <h1><%=@cocktail.name%></h1>
+
+      </div>
+      <div class="cocktail-show-card">
+        <h4>Allez on s'met ...</h4>
+
+        <%@cocktail.doses.each do |dose|%>
+          <div class="ingrédient"></div>
+        <%=dose.ingredient.name%> <%=dose.description%>
+        <% end %>
+      </div>
+
+        <div>
+          <h3>Rajoute un ingrédient !</h3>
+        <%= simple_form_for [@cocktail, @dose] do |f| %>
+          <%= f.input :description %>
+          <%= f.association :ingredient %>
+          <%= f.submit "add an ingredient", class: "btn btn-primary" %>
+          <% end %>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<%= link_to "Back to list", cocktails_path %>
+</div>
